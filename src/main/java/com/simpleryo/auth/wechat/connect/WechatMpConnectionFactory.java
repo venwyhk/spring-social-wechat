@@ -21,7 +21,7 @@ public class WechatMpConnectionFactory extends OAuth2ConnectionFactory<WechatMp>
 	}
 
 	public WechatMpConnectionFactory(String appId, String appSecret, ApiAdapter<WechatMp> apiAdapter) {
-		super("wechat-mp", new WechatServiceProvider<WechatMp>(appId, appSecret, WechatConstant.AUTHORIZE_API_URL),
+		super("wechatmp", new WechatServiceProvider<WechatMp>(appId, appSecret, WechatConstant.AUTHORIZE_API_URL),
 				apiAdapter);
 	}
 
