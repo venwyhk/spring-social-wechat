@@ -15,7 +15,7 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @ToString
-public class UserInfoRes {
+public class User {
 
 	private String openid;
 

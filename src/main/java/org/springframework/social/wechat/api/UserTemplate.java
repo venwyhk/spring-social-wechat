@@ -13,29 +13,29 @@ import org.springframework.social.wechat.WechatLangEnum;
  * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
-public class UserInfoTemplate implements UserInfoOperations {
+public class UserTemplate implements UserOperations {
 
 	private RestOperations restOperations;
 
 	private String accessToken;
 
-	public UserInfoTemplate(RestOperations restOperations, String accessToken) {
+	public UserTemplate(RestOperations restOperations, String accessToken) {
 		this.restOperations = restOperations;
 		this.accessToken = accessToken;
 	}
 
 	@Override
-	public UserInfoRes getUserInfo(String openId) {
-		return getUserInfo(openId, WechatLangEnum.EN);
+	public User getUserProfile(String openId) {
+		return getUserProfile(openId, WechatLangEnum.EN);
 	}
 
 	@Override
-	public UserInfoRes getUserInfo(String openId, WechatLangEnum lang) {
+	public User getUserProfile(String openId, WechatLangEnum lang) {
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
 		params.add("openid", openId);
 		params.add("lang", lang.value());
 		params.add("access_token", accessToken);
-		return restOperations.postForObject(WechatConstant.USERINFO_API_URL, params, UserInfoRes.class);
+		return restOperations.postForObject(WechatConstant.USERINFO_API_URL, params, User.class);
 	}
 
 }

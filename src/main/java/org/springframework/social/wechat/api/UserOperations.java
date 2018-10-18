@@ -8,10 +8,10 @@ import org.springframework.social.wechat.WechatLangEnum;
  * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
-public interface UserInfoOperations {
+public interface UserOperations {
 
-	UserInfoRes getUserInfo(String openId);
+	User getUserProfile(String openId);
 
-	UserInfoRes getUserInfo(String openId, WechatLangEnum lang);
+	User getUserProfile(String openId, WechatLangEnum lang);
 
 }

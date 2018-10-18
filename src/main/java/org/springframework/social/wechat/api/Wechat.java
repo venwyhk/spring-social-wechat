@@ -11,8 +11,8 @@ import org.springframework.web.client.RestOperations;
  */
 public interface Wechat extends ApiBinding {
 
-	RestOperations restOperations();
+	UserOperations userOperations();
 
-	UserInfoOperations userInfoOperations();
+	RestOperations restOperations();
 
 }
