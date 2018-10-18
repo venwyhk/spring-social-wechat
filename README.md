@@ -22,6 +22,12 @@ Or in Maven:
 </dependency>
 ```
 
+## Provider ID ##
+
+[WeChat Open Platform](https://open.weixin.qq.com/) provider ID: *wechat*
+
+[WeChat Official Accounts Platform](https://mp.weixin.qq.com/) provider ID: *wechatmp*
+
 ***
 
 [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)&nbsp;&nbsp;[![](https://www.gnu.org/graphics/agplv3-88x31.png)](https://www.gnu.org/licenses/agpl-3.0.en.html)&nbsp;&nbsp;
