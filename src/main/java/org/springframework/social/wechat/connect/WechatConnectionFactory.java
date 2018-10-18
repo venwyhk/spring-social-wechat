@@ -1,15 +1,15 @@
-package com.simpleryo.auth.wechat.connect;
+package org.springframework.social.wechat.connect;
 
 import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 import org.springframework.social.oauth2.AccessGrant;
 
-import com.simpleryo.auth.wechat.api.Wechat;
+import org.springframework.social.wechat.api.Wechat;
 
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:lei.su@simpleryo.co.nz">sulei</a>
+ * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
 public class WechatConnectionFactory extends OAuth2ConnectionFactory<Wechat> {

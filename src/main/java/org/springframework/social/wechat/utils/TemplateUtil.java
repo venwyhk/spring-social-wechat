@@ -1,4 +1,4 @@
-package com.simpleryo.auth.wechat.utils;
+package org.springframework.social.wechat.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,12 +8,12 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.social.support.FormMapHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-import com.simpleryo.auth.wechat.WechatMappingJackson2HttpMessageConverter;
+import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
 
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:lei.su@simpleryo.co.nz">sulei</a>
+ * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.7.5
  */
 public class TemplateUtil {

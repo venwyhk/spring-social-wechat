@@ -1,17 +1,17 @@
-package com.simpleryo.auth.wechat.connect;
+package org.springframework.social.wechat.connect;
 
 import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.oauth2.OAuth2Template;
 
-import com.simpleryo.auth.wechat.WechatConstant;
-import com.simpleryo.auth.wechat.api.Wechat;
-import com.simpleryo.auth.wechat.api.impl.WechatImpl;
-import com.simpleryo.auth.wechat.connect.WechatOAuth2Template;
+import org.springframework.social.wechat.WechatConstant;
+import org.springframework.social.wechat.api.Wechat;
+import org.springframework.social.wechat.api.impl.WechatImpl;
+import org.springframework.social.wechat.connect.WechatOAuth2Template;
 
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:lei.su@simpleryo.co.nz">sulei</a>
+ * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
 public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2ServiceProvider<T> {
