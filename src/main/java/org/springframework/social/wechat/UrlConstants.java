@@ -6,7 +6,7 @@ package org.springframework.social.wechat;
  * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
-public class WechatConstant {
+public class UrlConstants {
 
 	public static final String AUTH_API_URL = "https://api.weixin.qq.com/sns/auth";
 

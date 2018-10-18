@@ -4,7 +4,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestOperations;
 
-import org.springframework.social.wechat.WechatConstant;
+import org.springframework.social.wechat.UrlConstants;
 import org.springframework.social.wechat.WechatLangEnum;
 
 /**
@@ -35,7 +35,7 @@ public class UserTemplate implements UserOperations {
 		params.add("openid", openId);
 		params.add("lang", lang.value());
 		params.add("access_token", accessToken);
-		return restOperations.postForObject(WechatConstant.USERINFO_API_URL, params, User.class);
+		return restOperations.postForObject(UrlConstants.USERINFO_API_URL, params, User.class);
 	}
 
 }
