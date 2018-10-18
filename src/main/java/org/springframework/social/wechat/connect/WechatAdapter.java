@@ -1,4 +1,4 @@
-package com.simpleryo.auth.wechat.connect;
+package org.springframework.social.wechat.connect;
 
 import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.ConnectionValues;
@@ -7,7 +7,7 @@ import org.springframework.social.connect.UserProfile;
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:lei.su@simpleryo.co.nz">sulei</a>
+ * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
 public class WechatAdapter<T> implements ApiAdapter<T> {

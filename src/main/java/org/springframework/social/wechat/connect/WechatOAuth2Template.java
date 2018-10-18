@@ -1,4 +1,4 @@
-package com.simpleryo.auth.wechat.connect;
+package org.springframework.social.wechat.connect;
 
 import java.util.Map;
 
@@ -9,13 +9,13 @@ import org.springframework.social.oauth2.OAuth2Template;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import com.simpleryo.auth.wechat.WechatMappingJackson2HttpMessageConverter;
-import com.simpleryo.auth.wechat.utils.TemplateUtil;
+import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
+import org.springframework.social.wechat.utils.TemplateUtil;
 
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:lei.su@simpleryo.co.nz">sulei</a>
+ * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
 public class WechatOAuth2Template extends OAuth2Template {
@@ -52,7 +52,7 @@ public class WechatOAuth2Template extends OAuth2Template {
 		return TemplateUtil.addHttpMessageConverter(super.createRestTemplate(),
 				new WechatMappingJackson2HttpMessageConverter());
 	}
-	
+
 	@Override
 	public String buildAuthorizeUrl(OAuth2Parameters parameters) {
 		return replaceParamKey(super.buildAuthorizeUrl(parameters));
@@ -62,8 +62,8 @@ public class WechatOAuth2Template extends OAuth2Template {
 	public String buildAuthorizeUrl(GrantType grantType, OAuth2Parameters parameters) {
 		return replaceParamKey(super.buildAuthorizeUrl(grantType, parameters));
 	}
-	
-	private String replaceParamKey(String url) {
+
+	protected String replaceParamKey(String url) {
 		return url.replace("client_id", "appid").replace("client_secret", "secret");
 	}
 

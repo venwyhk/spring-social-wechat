@@ -1,4 +1,4 @@
-package com.simpleryo.auth.wechat.autoconfigurer;
+package org.springframework.social.wechat.autoconfigurer;
 
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
@@ -14,13 +14,13 @@ import org.springframework.social.config.annotation.EnableSocial;
 import org.springframework.social.config.annotation.SocialConfigurerAdapter;
 import org.springframework.social.connect.ConnectionFactory;
 
-import com.simpleryo.auth.wechat.api.Wechat;
-import com.simpleryo.auth.wechat.connect.WechatConnectionFactory;
+import org.springframework.social.wechat.api.Wechat;
+import org.springframework.social.wechat.connect.WechatConnectionFactory;
 
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:lei.su@simpleryo.co.nz">sulei</a>
+ * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
 @Configuration

@@ -1,4 +1,4 @@
-package com.simpleryo.auth.wechat.api.impl;
+package org.springframework.social.wechat.api.impl;
 
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
@@ -8,16 +8,16 @@ import org.springframework.social.support.ClientHttpRequestFactorySelector;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
-import com.simpleryo.auth.wechat.api.UserInfoOperations;
-import com.simpleryo.auth.wechat.api.UserInfoTemplate;
-import com.simpleryo.auth.wechat.api.Wechat;
-import com.simpleryo.auth.wechat.utils.TemplateUtil;
-import com.simpleryo.auth.wechat.WechatMappingJackson2HttpMessageConverter;
+import org.springframework.social.wechat.api.UserInfoOperations;
+import org.springframework.social.wechat.api.UserInfoTemplate;
+import org.springframework.social.wechat.api.Wechat;
+import org.springframework.social.wechat.utils.TemplateUtil;
+import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
 
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:lei.su@simpleryo.co.nz">sulei</a>
+ * @author <a href="mailto:larry7696@gmail.com">Larry</a>
  * @version 18.6.27
  */
 public class WechatImpl extends AbstractOAuth2ApiBinding implements Wechat {
@@ -55,4 +55,5 @@ public class WechatImpl extends AbstractOAuth2ApiBinding implements Wechat {
 		super.configureRestTemplate(restTemplate);
 		restTemplate.setErrorHandler(new WechatErrorHandler());
 	}
+
 }
