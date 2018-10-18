@@ -1,4 +1,4 @@
-package org.springframework.social.wechat.mp.autoconfigurer;
+package org.springframework.social.wechat.autoconfigurer;
 
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.social.config.annotation.EnableSocial;
 import org.springframework.social.config.annotation.SocialConfigurerAdapter;
 import org.springframework.social.connect.ConnectionFactory;
-import org.springframework.social.wechat.mp.api.WechatMp;
-import org.springframework.social.wechat.mp.connect.WechatMpConnectionFactory;
+import org.springframework.social.wechat.api.WechatMp;
+import org.springframework.social.wechat.connect.WechatMpConnectionFactory;
 
 /**
  * spring-social-wechat

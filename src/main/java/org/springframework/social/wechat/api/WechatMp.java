@@ -1,6 +1,4 @@
-package org.springframework.social.wechat.mp.api;
-
-import org.springframework.social.wechat.api.Wechat;
+package org.springframework.social.wechat.api;
 
 /**
  * spring-social-wechat

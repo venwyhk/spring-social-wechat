@@ -1,14 +1,11 @@
-package org.springframework.social.wechat.mp.connect;
+package org.springframework.social.wechat.connect;
 
 import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 import org.springframework.social.oauth2.AccessGrant;
 
 import org.springframework.social.wechat.UrlConstants;
-import org.springframework.social.wechat.connect.WechatAccessGrant;
-import org.springframework.social.wechat.connect.WechatAdapter;
-import org.springframework.social.wechat.connect.WechatServiceProvider;
-import org.springframework.social.wechat.mp.api.WechatMp;
+import org.springframework.social.wechat.api.WechatMp;
 
 /**
  * spring-social-wechat

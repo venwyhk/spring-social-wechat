@@ -1,4 +1,4 @@
-package org.springframework.social.wechat.mp.autoconfigurer;
+package org.springframework.social.wechat.autoconfigurer;
 
 import org.springframework.boot.autoconfigure.social.SocialProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
