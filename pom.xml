@@ -5,6 +5,23 @@
     <artifactId>spring-social-wechat</artifactId>
     <version>1.2</version>
     <packaging>jar</packaging>
+    <inceptionYear>2018</inceptionYear>
+    <licenses>
+        <license>
+            <name>GNU Affero General Public License</name>
+            <url>https://www.gnu.org/licenses/agpl-3.0.html</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>venwyhk</id>
+            <name>Larry</name>
+            <email>larry7696@gmail.com</email>
+            <roles> 
+                <role>Developer</role> 
+            </roles>
+        </developer>
+    </developers>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
