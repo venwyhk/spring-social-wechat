@@ -11,8 +11,8 @@ import lombok.Data;
 @Data
 public class ErrorCodeRes {
 
-	public Integer errcode;
+	private Integer errcode;
 
-	public String errmsg;
+	private String errmsg;
 
 }

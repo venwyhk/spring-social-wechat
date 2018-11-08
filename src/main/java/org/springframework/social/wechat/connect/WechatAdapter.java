@@ -19,6 +19,7 @@ public class WechatAdapter<T> implements ApiAdapter<T> {
 
 	@Override
 	public void setConnectionValues(T api, ConnectionValues values) {
+		// Do nothing
 	}
 
 	@Override
