@@ -24,9 +24,9 @@ Or in Maven:
 
 ## Provider ID ##
 
-[WeChat Open Platform](https://open.weixin.qq.com/) provider ID: *wechat*
+[WeChat Open Platform](https://open.weixin.qq.com/) provider ID: *wechat* ; scope : snsapi_login .
 
-[WeChat Official Accounts Platform](https://mp.weixin.qq.com/) provider ID: *wechatmp*
+[WeChat Official Accounts Platform](https://mp.weixin.qq.com/) provider ID: *wechatmp* ; scope : snsapi_userinfo .
 
 ***
 
