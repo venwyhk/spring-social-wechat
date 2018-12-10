@@ -16,6 +16,8 @@ import org.springframework.social.connect.ConnectionFactory;
 import org.springframework.social.wechat.api.WechatMp;
 import org.springframework.social.wechat.connect.WechatMpConnectionFactory;
 
+import lombok.AllArgsConstructor;
+
 /**
  * spring-social-wechat
  * 
@@ -28,6 +30,7 @@ import org.springframework.social.wechat.connect.WechatMpConnectionFactory;
 @AutoConfigureAfter(WebMvcAutoConfiguration.class)
 public class WechatMpAutoConfiguration {
 
+	@AllArgsConstructor
 	@Configuration
 	@EnableSocial
 	@EnableConfigurationProperties(WechatMpProperties.class)
@@ -35,10 +38,6 @@ public class WechatMpAutoConfiguration {
 	protected static class WechatConfigurerAdapter extends SocialAutoConfigurerAdapter {
 
 		private final WechatMpProperties properties;
-
-		protected WechatConfigurerAdapter(WechatMpProperties properties) {
-			this.properties = properties;
-		}
 
 		@Override
 		protected ConnectionFactory<WechatMp> createConnectionFactory() {

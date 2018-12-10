@@ -8,6 +8,8 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.social.support.FormMapHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
+
 /**
  * spring-social-wechat
  * 
@@ -20,7 +22,7 @@ public class TemplateUtil {
 		List<HttpMessageConverter<?>> converters = new ArrayList<HttpMessageConverter<?>>(3);
 		converters.add(new FormHttpMessageConverter());
 		converters.add(new FormMapHttpMessageConverter());
-		converters.add(httpMessageConverter);
+		converters.add(new WechatMappingJackson2HttpMessageConverter());
 		restTemplate.setMessageConverters(converters);
 		return restTemplate;
 	}

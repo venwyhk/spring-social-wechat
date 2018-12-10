@@ -30,8 +30,8 @@ public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2Servi
 		return oauth2Template;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
+	@SuppressWarnings("unchecked")
 	public T getApi(String accessToken) {
 		return (T) new WechatImpl(accessToken);
 	}

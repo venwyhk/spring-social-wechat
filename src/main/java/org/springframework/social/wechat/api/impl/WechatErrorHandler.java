@@ -23,8 +23,8 @@ public class WechatErrorHandler extends DefaultResponseErrorHandler {
 
 	@Override
 	public void handleError(ClientHttpResponse response) throws IOException {
-		Map<String, Object> errorDetails = extractErrorDetailsFromResponse(response);
-		if (response.getStatusCode().series().equals(HttpStatus.Series.CLIENT_ERROR)) {
+		if (HttpStatus.Series.CLIENT_ERROR.equals(response.getStatusCode().series())) {
+			Map<String, Object> errorDetails = extractErrorDetailsFromResponse(response);
 			throw new UncategorizedApiException("wechat",
 					errorDetails.containsKey("errmsg") ? (String) errorDetails.get("errmsg") : "Unknown error", null);
 		}
