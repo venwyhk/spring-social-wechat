@@ -22,11 +22,11 @@ Or in Maven:
 </dependency>
 ```
 
-## Provider ID ##
+## Provider ID & Scope ##
 
-[WeChat Open Platform](https://open.weixin.qq.com/) provider ID: *wechat* ; scope : *snsapi_login* .
+[WeChat Open Platform](https://open.weixin.qq.com/) providerId: *wechat* ; scope : *snsapi_login* .
 
-[WeChat Official Accounts Platform](https://mp.weixin.qq.com/) provider ID: *wechatmp* ; scope : *snsapi_userinfo* .
+[WeChat Official Accounts Platform](https://mp.weixin.qq.com/) providerId: *wechatmp* ; scope : *snsapi_userinfo* .
 
 ***
 
