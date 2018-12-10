@@ -6,8 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.10.18
+ * @author Larry
  */
 @ConfigurationProperties(prefix = "spring.social.wechatmp")
 public class WechatMpProperties extends SocialProperties {

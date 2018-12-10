@@ -19,8 +19,7 @@ import org.springframework.social.wechat.connect.WechatMpConnectionFactory;
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.10.18
+ * @author Larry
  */
 @Configuration
 @ConditionalOnClass({ SocialConfigurerAdapter.class, WechatMpConnectionFactory.class })

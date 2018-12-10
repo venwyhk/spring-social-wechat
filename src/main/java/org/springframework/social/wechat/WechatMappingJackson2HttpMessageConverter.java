@@ -9,8 +9,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.7.5
+ * @author Larry
  */
 public class WechatMappingJackson2HttpMessageConverter extends MappingJackson2HttpMessageConverter {
 

@@ -1,5 +1,10 @@
 package org.springframework.social.wechat;
 
+/**
+ * spring-social-wechat
+ * 
+ * @author Larry
+ */
 public enum WechatLangEnum {
 
 	ZH_CN("zh-CN"), EN("en");

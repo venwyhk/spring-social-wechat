@@ -15,8 +15,7 @@ import org.springframework.social.wechat.utils.TemplateUtil;
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.6.27
+ * @author Larry
  */
 public class WechatOAuth2Template extends OAuth2Template {
 

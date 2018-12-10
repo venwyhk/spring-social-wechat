@@ -11,8 +11,7 @@ import org.springframework.social.wechat.connect.WechatOAuth2Template;
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.6.27
+ * @author Larry
  */
 public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2ServiceProvider<T> {
 
