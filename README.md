@@ -30,7 +30,7 @@ Or in Maven:
 
 ## Sample ##
 
-[Sample](https://github.com/venwyhk/spring-social-wechat-sample)
+[spring-social-wechat-sample](https://github.com/venwyhk/spring-social-wechat-sample)
 
 ***
 
