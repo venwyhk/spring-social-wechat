@@ -1,22 +1,22 @@
-[![](https://jitpack.io/v/venwyhk/spring-social-wechat.svg)](https://jitpack.io/#venwyhk/spring-social-wechat)&nbsp;&nbsp;[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ee8408664564445a19cda91ad00fa12)](https://www.codacy.com/app/larry7696/spring-social-wechat?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=venwyhk/spring-social-wechat&amp;utm_campaign=Badge_Grade)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat)&nbsp;&nbsp;[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ee8408664564445a19cda91ad00fa12)](https://www.codacy.com/app/larry7696/spring-social-wechat?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=venwyhk/spring-social-wechat&amp;utm_campaign=Badge_Grade)
 
 # spring-social-wechat #
 
 ## Installing ##
 
-Production releases are available on [JitPack](https://jitpack.io/).
+Production releases are available on *Maven Central*.
 
 In Gradle:
 
 ```groovy
-implementation 'com.github.venwyhk:spring-social-wechat:${version}'
+implementation 'com.ikasoa:spring-social-wechat:${version}'
 ```
 
 Or in Maven:
 
 ```xml
 <dependency>
-    <groupId>com.github.venwyhk</groupId>
+    <groupId>com.ikasoa</groupId>
     <artifactId>spring-social-wechat</artifactId>
     <version>${version}</version>
 </dependency>
