@@ -13,14 +13,13 @@ import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConvert
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.7.5
+ * @author Larry
  */
 public class TemplateUtil {
 
 	public static RestTemplate addHttpMessageConverter(RestTemplate restTemplate,
 			HttpMessageConverter<?> httpMessageConverter) {
-		List<HttpMessageConverter<?>> converters = new ArrayList<HttpMessageConverter<?>>(2);
+		List<HttpMessageConverter<?>> converters = new ArrayList<HttpMessageConverter<?>>(3);
 		converters.add(new FormHttpMessageConverter());
 		converters.add(new FormMapHttpMessageConverter());
 		converters.add(new WechatMappingJackson2HttpMessageConverter());

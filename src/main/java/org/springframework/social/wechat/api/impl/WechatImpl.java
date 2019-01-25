@@ -17,8 +17,7 @@ import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConvert
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.6.27
+ * @author Larry
  */
 public class WechatImpl extends AbstractOAuth2ApiBinding implements Wechat {
 

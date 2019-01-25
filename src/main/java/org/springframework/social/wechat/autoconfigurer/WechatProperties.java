@@ -3,12 +3,19 @@ package org.springframework.social.wechat.autoconfigurer;
 import org.springframework.boot.autoconfigure.social.SocialProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.6.27
+ * @author Larry
  */
 @ConfigurationProperties(prefix = "spring.social.wechat")
 public class WechatProperties extends SocialProperties {
+
+	@Getter
+	@Setter
+	private String scope = "snsapi_login";
+
 }

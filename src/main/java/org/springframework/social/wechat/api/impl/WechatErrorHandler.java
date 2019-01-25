@@ -17,18 +17,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.6.27
+ * @author Larry
  */
 public class WechatErrorHandler extends DefaultResponseErrorHandler {
 
 	@Override
 	public void handleError(ClientHttpResponse response) throws IOException {
-		HttpStatus statusCode = response.getStatusCode();
-		Map<String, Object> errorDetails = extractErrorDetailsFromResponse(response);
-		if (statusCode.series().equals(HttpStatus.Series.CLIENT_ERROR)) {
-			String message = errorDetails.containsKey("errmsg") ? (String) errorDetails.get("errmsg") : "Unknown error";
-			throw new UncategorizedApiException("wechat", message, null);
+		if (HttpStatus.Series.CLIENT_ERROR.equals(response.getStatusCode().series())) {
+			Map<String, Object> errorDetails = extractErrorDetailsFromResponse(response);
+			throw new UncategorizedApiException("wechat",
+					errorDetails.containsKey("errmsg") ? (String) errorDetails.get("errmsg") : "Unknown error", null);
 		}
 		handleUncategorizedError(response);
 	}
@@ -42,10 +40,10 @@ public class WechatErrorHandler extends DefaultResponseErrorHandler {
 	}
 
 	private Map<String, Object> extractErrorDetailsFromResponse(ClientHttpResponse response) throws IOException {
-		ObjectMapper mapper = new ObjectMapper(new JsonFactory());
 		try {
-			return mapper.<Map<String, Object>>readValue(response.getBody(), new TypeReference<Map<String, Object>>() {
-			});
+			return new ObjectMapper(new JsonFactory()).<Map<String, Object>>readValue(response.getBody(),
+					new TypeReference<Map<String, Object>>() {
+					});
 		} catch (JsonParseException e) {
 			return Collections.emptyMap();
 		}

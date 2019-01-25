@@ -9,13 +9,12 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.7.5
+ * @author Larry
  */
 public class WechatMappingJackson2HttpMessageConverter extends MappingJackson2HttpMessageConverter {
 
 	public WechatMappingJackson2HttpMessageConverter() {
-		List<MediaType> mediaTypes = new ArrayList<>();
+		List<MediaType> mediaTypes = new ArrayList<>(1);
 		mediaTypes.add(MediaType.TEXT_PLAIN);
 		setSupportedMediaTypes(mediaTypes);
 	}

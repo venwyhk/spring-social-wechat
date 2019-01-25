@@ -7,8 +7,7 @@ import lombok.Getter;
 /**
  * spring-social-wechat
  * 
- * @author <a href="mailto:larry7696@gmail.com">Larry</a>
- * @version 18.6.27
+ * @author Larry
  */
 @Getter
 public class WechatAccessGrant extends AccessGrant {
