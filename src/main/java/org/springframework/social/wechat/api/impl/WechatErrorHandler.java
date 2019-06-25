@@ -35,7 +35,7 @@ public class WechatErrorHandler extends DefaultResponseErrorHandler {
 		try {
 			super.handleError(response);
 		} catch (Exception e) {
-			throw new UncategorizedApiException("wechat", "Error consuming wechat REST api", e);
+			throw new UncategorizedApiException("wechat", "Error consuming wechat REST api .", e);
 		}
 	}
 

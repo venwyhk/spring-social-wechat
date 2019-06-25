@@ -42,7 +42,7 @@ public class WechatAutoConfiguration {
 
 		@Override
 		protected ConnectionFactory<Wechat> createConnectionFactory() {
-			WechatConnectionFactory factory = new WechatConnectionFactory(this.properties.getAppId(),
+			final WechatConnectionFactory factory = new WechatConnectionFactory(this.properties.getAppId(),
 					this.properties.getAppSecret());
 			factory.setScope(this.properties.getScope());
 			return factory;

@@ -15,10 +15,6 @@ import org.springframework.social.wechat.connect.WechatOAuth2Template;
  */
 public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2ServiceProvider<T> {
 
-	public WechatServiceProvider(String appId, String appSecret) {
-		super(getOAuth2Template(appId, appSecret, UrlConstants.QRCONNECT_API_URL));
-	}
-
 	public WechatServiceProvider(String appId, String appSecret, String authorizeUrl) {
 		super(getOAuth2Template(appId, appSecret, authorizeUrl));
 	}
