@@ -41,9 +41,9 @@ public class WechatMpAutoConfiguration {
 
 		@Override
 		protected ConnectionFactory<WechatMp> createConnectionFactory() {
-			final WechatMpConnectionFactory factory = new WechatMpConnectionFactory(this.properties.getAppId(),
-					this.properties.getAppSecret());
-			factory.setScope(this.properties.getScope());
+			final WechatMpConnectionFactory factory = new WechatMpConnectionFactory(properties.getAppId(),
+					properties.getAppSecret());
+			factory.setScope(properties.getScope());
 			return factory;
 		}
 

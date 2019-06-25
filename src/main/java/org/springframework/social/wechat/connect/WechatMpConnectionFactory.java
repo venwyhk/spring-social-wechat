@@ -11,7 +11,6 @@ import org.springframework.social.wechat.api.WechatMp;
  * 
  * @author Larry
  */
-
 public class WechatMpConnectionFactory extends OAuth2ConnectionFactory<WechatMp> {
 
 	public WechatMpConnectionFactory(String appId, String appSecret) {

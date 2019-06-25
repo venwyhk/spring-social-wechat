@@ -22,7 +22,7 @@ public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2Servi
 	private static OAuth2Template getOAuth2Template(String appId, String appSecret, String authorizeUrl) {
 		OAuth2Template oauth2Template = new WechatOAuth2Template(appId, appSecret, authorizeUrl,
 				UrlConstants.ACCESS_TOKEN_API_URL);
-		oauth2Template.setUseParametersForClientAuthentication(true);
+		oauth2Template.setUseParametersForClientAuthentication(Boolean.TRUE);
 		return oauth2Template;
 	}
 
