@@ -13,6 +13,7 @@ import org.springframework.social.support.ClientHttpRequestFactorySelector;
 import org.springframework.social.support.FormMapHttpMessageConverter;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.social.wechat.WechatErrorHandler;
 import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
 import org.springframework.social.wechat.api.UserOperations;
 import org.springframework.social.wechat.api.UserTemplate;

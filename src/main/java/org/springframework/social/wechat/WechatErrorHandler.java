@@ -1,4 +1,4 @@
-package org.springframework.social.wechat.api.impl;
+package org.springframework.social.wechat;
 
 import java.io.IOException;
 import java.util.Collections;

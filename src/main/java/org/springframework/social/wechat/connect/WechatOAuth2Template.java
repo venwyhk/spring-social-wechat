@@ -11,9 +11,8 @@ import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.social.oauth2.OAuth2Template;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-
+import org.springframework.social.wechat.WechatErrorHandler;
 import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
-import org.springframework.social.wechat.api.impl.WechatErrorHandler;
 
 /**
  * spring-social-wechat
