@@ -7,6 +7,7 @@ import org.springframework.social.wechat.UrlConstants;
 import org.springframework.social.wechat.api.Wechat;
 import org.springframework.social.wechat.api.impl.WechatImpl;
 import org.springframework.social.wechat.connect.WechatOAuth2Template;
+import org.springframework.util.Assert;
 
 /**
  * spring-social-wechat
@@ -14,6 +15,10 @@ import org.springframework.social.wechat.connect.WechatOAuth2Template;
  * @author Larry
  */
 public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2ServiceProvider<T> {
+
+	public WechatServiceProvider(String appId, String appSecret) {
+		this(appId, appSecret, UrlConstants.QRCONNECT_API_URL);
+	}
 
 	public WechatServiceProvider(String appId, String appSecret, String authorizeUrl) {
 		super(getOAuth2Template(appId, appSecret, authorizeUrl));
@@ -29,6 +34,7 @@ public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2Servi
 	@Override
 	@SuppressWarnings("unchecked")
 	public T getApi(String accessToken) {
+		Assert.notNull(accessToken, "The accessToken cannot be null");
 		return (T) new WechatImpl(accessToken);
 	}
 

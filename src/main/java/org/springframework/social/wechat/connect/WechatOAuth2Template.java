@@ -1,7 +1,10 @@
 package org.springframework.social.wechat.connect;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.GrantType;
 import org.springframework.social.oauth2.OAuth2Parameters;
@@ -10,7 +13,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
-import org.springframework.social.wechat.utils.TemplateUtil;
+import org.springframework.social.wechat.api.impl.WechatErrorHandler;
 
 /**
  * spring-social-wechat
@@ -48,8 +51,12 @@ public class WechatOAuth2Template extends OAuth2Template {
 
 	@Override
 	protected RestTemplate createRestTemplate() {
-		return TemplateUtil.addHttpMessageConverter(super.createRestTemplate(),
-				new WechatMappingJackson2HttpMessageConverter());
+		RestTemplate restTemplate = super.createRestTemplate();
+		List<HttpMessageConverter<?>> converters = new ArrayList<HttpMessageConverter<?>>(1);
+		converters.add(new WechatMappingJackson2HttpMessageConverter());
+		restTemplate.setMessageConverters(converters);
+		restTemplate.setErrorHandler(new WechatErrorHandler());
+		return restTemplate;
 	}
 
 	@Override

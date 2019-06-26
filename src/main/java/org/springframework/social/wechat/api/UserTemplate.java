@@ -1,5 +1,6 @@
 package org.springframework.social.wechat.api;
 
+import org.springframework.util.Assert;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestOperations;
@@ -28,6 +29,7 @@ public class UserTemplate implements UserOperations {
 
 	@Override
 	public User getUserProfile(String openId, WechatLangEnum lang) {
+		Assert.notNull(openId, "The openId cannot be null");
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>(3);
 		params.add("openid", openId);
 		params.add("lang", lang.getValue());
