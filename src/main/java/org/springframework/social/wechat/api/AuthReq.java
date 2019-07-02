@@ -12,8 +12,8 @@ import lombok.Data;
 @Data
 public class AuthReq {
 
-	public String accessToken;
+	private String accessToken;
 
-	public String openid;
+	private String openid;
 
 }

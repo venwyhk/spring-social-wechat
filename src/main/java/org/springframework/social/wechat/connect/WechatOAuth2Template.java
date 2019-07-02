@@ -34,8 +34,8 @@ public class WechatOAuth2Template extends OAuth2Template {
 	protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
 		if ("authorization_code".equals(parameters.getFirst("grant_type"))) {
 			parameters.set("appid", parameters.getFirst("client_id"));
-			parameters.set("secret", parameters.getFirst("client_secret"));
 			parameters.remove("client_id");
+			parameters.set("secret", parameters.getFirst("client_secret"));
 			parameters.remove("client_secret");
 		}
 		return super.postForAccessGrant(accessTokenUrl, parameters);
