@@ -16,10 +16,6 @@ public class WechatMpProperties extends SocialProperties {
 
 	@Getter
 	@Setter
-	private String scope = "snsapi_userinfo";
-
-	@Getter
-	@Setter
-	private String scope2 = "snsapi_base";
+	private String scope = "snsapi_userinfo"; // or snsapi_base
 
 }
