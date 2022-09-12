@@ -1,4 +1,4 @@
-package org.springframework.social.wechat.autoconfigurer;
+package org.springframework.social.wechat.autoconfigure;
 
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
