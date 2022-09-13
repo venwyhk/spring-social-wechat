@@ -16,16 +16,18 @@ import org.springframework.util.Assert;
 public class WecomServiceProvider<T extends Wechat> extends AbstractOAuth2ServiceProvider<T> {
 
 	public WecomServiceProvider(String appId, String agentId, String appSecret) {
-		this(getOAuth2Template(appId, appSecret, UrlConstants.WECOM_QRCONNECT_API_URL));
+		this(getOAuth2Template(appId, agentId, appSecret, UrlConstants.WECOM_QRCONNECT_API_URL));
 	}
 
 	public WecomServiceProvider(OAuth2Template template) {
 		super(template);
 	}
 
-	private static OAuth2Template getOAuth2Template(String appId, String appSecret, String authorizeUrl) {
-		OAuth2Template oauth2Template = new WechatOAuth2Template(appId, appSecret, authorizeUrl,
+	private static OAuth2Template getOAuth2Template(String appId, String agentId, String appSecret,
+			String authorizeUrl) {
+		WecomOAuth2Template oauth2Template = new WecomOAuth2Template(appId, appSecret, authorizeUrl,
 				UrlConstants.WECOM_ACCESS_TOKEN_API_URL);
+		oauth2Template.setAgentId(agentId);
 		oauth2Template.setUseParametersForClientAuthentication(true);
 		return oauth2Template;
 	}

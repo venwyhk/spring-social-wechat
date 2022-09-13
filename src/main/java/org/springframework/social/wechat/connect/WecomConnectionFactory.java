@@ -12,12 +12,12 @@ import org.springframework.social.wechat.api.Wecom;
  */
 public class WecomConnectionFactory extends OAuth2ConnectionFactory<Wecom> {
 
-	public WecomConnectionFactory(String appId, String appSecret) {
-		this(appId, appSecret, null);
+	public WecomConnectionFactory(String appId, String agentId, String appSecret) {
+		this(appId, agentId, appSecret, null);
 	}
 
-	public WecomConnectionFactory(String appId, String appSecret, ApiAdapter<Wecom> apiAdapter) {
-		super("wecom", new WechatServiceProvider<Wecom>(appId, appSecret), apiAdapter);
+	public WecomConnectionFactory(String appId, String agentId, String appSecret, ApiAdapter<Wecom> apiAdapter) {
+		super("wecom", new WecomServiceProvider<Wecom>(appId, agentId, appSecret), apiAdapter);
 	}
 
 	@Override
