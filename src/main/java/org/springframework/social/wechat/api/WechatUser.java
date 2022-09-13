@@ -14,7 +14,7 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @ToString
-public class User {
+public class WechatUser implements User {
 
 	private String openid;
 

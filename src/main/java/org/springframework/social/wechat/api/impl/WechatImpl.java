@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.social.wechat.WechatErrorHandler;
 import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
 import org.springframework.social.wechat.api.UserOperations;
-import org.springframework.social.wechat.api.UserTemplate;
+import org.springframework.social.wechat.api.WechatUserTemplate;
 import org.springframework.social.wechat.api.Wechat;
 
 /**
@@ -30,7 +30,12 @@ public class WechatImpl extends AbstractOAuth2ApiBinding implements Wechat {
 
 	public WechatImpl(String accessToken) {
 		super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);
-		userOperations = new UserTemplate(restOperations(), accessToken);
+		this.userOperations = new WechatUserTemplate(restOperations(), accessToken);
+	}
+
+	public WechatImpl(String accessToken, UserOperations userOperations) {
+		super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);
+		this.userOperations = userOperations;
 	}
 
 	@Override

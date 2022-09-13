@@ -4,8 +4,6 @@ import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.util.MultiValueMap;
 
-import lombok.Setter;
-
 /**
  * spring-social-wechat
  * 
@@ -13,13 +11,14 @@ import lombok.Setter;
  */
 public class WecomOAuth2Template extends WechatOAuth2Template {
 
-	@Setter
 	private String agentId;
 
-	public WecomOAuth2Template(String clientId, String clientSecret, String authorizeUrl, String accessTokenUrl) {
+	public WecomOAuth2Template(String clientId, String agentId, String clientSecret, String authorizeUrl,
+			String accessTokenUrl) {
 		super(clientId, clientSecret, authorizeUrl, accessTokenUrl);
+		this.agentId = agentId;
 	}
-	
+
 	@Override
 	protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
 		if ("authorization_code".equals(parameters.getFirst("grant_type"))) {

@@ -5,7 +5,7 @@ import org.springframework.social.oauth2.OAuth2Template;
 
 import org.springframework.social.wechat.UrlConstants;
 import org.springframework.social.wechat.api.Wechat;
-import org.springframework.social.wechat.api.impl.WechatImpl;
+import org.springframework.social.wechat.api.impl.WecomImpl;
 import org.springframework.util.Assert;
 
 /**
@@ -25,9 +25,8 @@ public class WecomServiceProvider<T extends Wechat> extends AbstractOAuth2Servic
 
 	private static OAuth2Template getOAuth2Template(String appId, String agentId, String appSecret,
 			String authorizeUrl) {
-		WecomOAuth2Template oauth2Template = new WecomOAuth2Template(appId, appSecret, authorizeUrl,
+		WecomOAuth2Template oauth2Template = new WecomOAuth2Template(appId, agentId, appSecret, authorizeUrl,
 				UrlConstants.WECOM_ACCESS_TOKEN_API_URL);
-		oauth2Template.setAgentId(agentId);
 		oauth2Template.setUseParametersForClientAuthentication(true);
 		return oauth2Template;
 	}
@@ -36,7 +35,7 @@ public class WecomServiceProvider<T extends Wechat> extends AbstractOAuth2Servic
 	@SuppressWarnings("unchecked")
 	public T getApi(String accessToken) {
 		Assert.notNull(accessToken, "The accessToken cannot be null");
-		return (T) new WechatImpl(accessToken);
+		return (T) new WecomImpl(accessToken);
 	}
 
 }

@@ -6,6 +6,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestOperations;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import org.springframework.social.wechat.UrlConstants;
 import org.springframework.social.wechat.WechatLangEnum;
@@ -16,10 +17,12 @@ import org.springframework.social.wechat.WechatLangEnum;
  * @author Larry
  */
 @AllArgsConstructor
-public class UserTemplate implements UserOperations {
+public class WechatUserTemplate implements UserOperations {
 
+	@Getter
 	private RestOperations restOperations;
 
+	@Getter
 	private String accessToken;
 
 	@Override
@@ -34,7 +37,7 @@ public class UserTemplate implements UserOperations {
 		params.add("openid", openId);
 		params.add("lang", lang.getValue());
 		params.add("access_token", accessToken);
-		return restOperations.postForObject(UrlConstants.USERINFO_API_URL, params, User.class);
+		return restOperations.postForObject(UrlConstants.USERINFO_API_URL, params, WechatUser.class);
 	}
 
 }
