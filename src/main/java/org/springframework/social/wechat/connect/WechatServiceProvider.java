@@ -6,7 +6,6 @@ import org.springframework.social.oauth2.OAuth2Template;
 import org.springframework.social.wechat.UrlConstants;
 import org.springframework.social.wechat.api.Wechat;
 import org.springframework.social.wechat.api.impl.WechatImpl;
-import org.springframework.social.wechat.connect.WechatOAuth2Template;
 import org.springframework.util.Assert;
 
 /**
@@ -21,7 +20,11 @@ public class WechatServiceProvider<T extends Wechat> extends AbstractOAuth2Servi
 	}
 
 	public WechatServiceProvider(String appId, String appSecret, String authorizeUrl) {
-		super(getOAuth2Template(appId, appSecret, authorizeUrl));
+		this(getOAuth2Template(appId, appSecret, authorizeUrl));
+	}
+
+	public WechatServiceProvider(OAuth2Template template) {
+		super(template);
 	}
 
 	private static OAuth2Template getOAuth2Template(String appId, String appSecret, String authorizeUrl) {

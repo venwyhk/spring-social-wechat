@@ -18,5 +18,9 @@ public class UrlConstants {
 	public static final String AUTHORIZE_API_URL = "https://open.weixin.qq.com/connect/oauth2/authorize";
 
 	public static final String QRCONNECT_API_URL = "https://open.weixin.qq.com/connect/qrconnect";
+	
+//	public static final String WECOM_QRCONNECT_API_URL = "https://open.work.weixin.qq.com/wwopen/sso/qrConnect";
+//	
+//	public static final String WECOM_ACCESS_TOKEN_API_URL = "https://qyapi.weixin.qq.com/cgi-bin/auth/getuserinfo";
 
 }
