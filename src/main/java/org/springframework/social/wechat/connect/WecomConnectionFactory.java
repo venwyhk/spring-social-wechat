@@ -17,7 +17,7 @@ public class WecomConnectionFactory extends OAuth2ConnectionFactory<Wecom> {
 	}
 
 	public WecomConnectionFactory(String appId, String appSecret, ApiAdapter<Wecom> apiAdapter) {
-		super("wecom", new WechatOAuth2Template<Wecom>(appId, appSecret), apiAdapter);
+		super("wecom", new WechatServiceProvider<Wecom>(appId, appSecret), apiAdapter);
 	}
 
 	@Override
