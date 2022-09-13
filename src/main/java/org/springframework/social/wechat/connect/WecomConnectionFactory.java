@@ -3,7 +3,6 @@ package org.springframework.social.wechat.connect;
 import org.springframework.social.connect.ApiAdapter;
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 import org.springframework.social.oauth2.AccessGrant;
-import org.springframework.social.wechat.UrlConstants;
 import org.springframework.social.wechat.api.Wecom;
 
 /**
@@ -18,8 +17,7 @@ public class WecomConnectionFactory extends OAuth2ConnectionFactory<Wecom> {
 	}
 
 	public WecomConnectionFactory(String appId, String appSecret, ApiAdapter<Wecom> apiAdapter) {
-		super("wecom", new WechatServiceProvider<Wecom>(appId, appSecret, UrlConstants.AUTHORIZE_API_URL),
-				apiAdapter);
+		super("wecom", new WechatOAuth2Template<Wecom>(appId, appSecret), apiAdapter);
 	}
 
 	@Override
