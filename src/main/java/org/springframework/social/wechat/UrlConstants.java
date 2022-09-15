@@ -24,5 +24,7 @@ public class UrlConstants {
 	public static final String WECOM_ACCESS_TOKEN_API_URL = "https://qyapi.weixin.qq.com/cgi-bin/gettoken";
 	
 	public static final String WECOM_USERINFO_API_URL = "https://qyapi.weixin.qq.com/cgi-bin/auth/getuserinfo";
+	
+	public static final String WECOM_USER_API_URL = "https://qyapi.weixin.qq.com/cgi-bin/user/get";
 
 }

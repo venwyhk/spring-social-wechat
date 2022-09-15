@@ -14,8 +14,9 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 public class WechatMappingJackson2HttpMessageConverter extends MappingJackson2HttpMessageConverter {
 
 	public WechatMappingJackson2HttpMessageConverter() {
-		List<MediaType> mediaTypes = new ArrayList<>(1);
+		List<MediaType> mediaTypes = new ArrayList<>(2);
 		mediaTypes.add(MediaType.TEXT_PLAIN);
+		mediaTypes.add(MediaType.parseMediaType("application/json;charset=utf-8"));
 		setSupportedMediaTypes(mediaTypes);
 	}
 
