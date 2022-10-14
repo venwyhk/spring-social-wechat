@@ -26,12 +26,12 @@ public class WechatUserTemplate implements UserOperations {
 	private String accessToken;
 
 	@Override
-	public User getUserProfile(String openId) {
+	public WechatUser getUserProfile(String openId) {
 		return getUserProfile(openId, WechatLangEnum.EN);
 	}
 
 	@Override
-	public User getUserProfile(String openId, WechatLangEnum lang) {
+	public WechatUser getUserProfile(String openId, WechatLangEnum lang) {
 		Assert.notNull(openId, "The openId cannot be null");
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>(3);
 		params.add("openid", openId);
