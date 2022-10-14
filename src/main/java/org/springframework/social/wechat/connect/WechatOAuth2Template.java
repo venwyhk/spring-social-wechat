@@ -65,19 +65,15 @@ public class WechatOAuth2Template extends OAuth2Template {
 
 	@Override
 	public String buildAuthorizeUrl(OAuth2Parameters parameters) {
-		return replaceParamKey(super.buildAuthorizeUrl(adjustmentParameters(parameters)));
+		return replaceParamKey(super.buildAuthorizeUrl(parameters));
 	}
 
 	@Override
 	public String buildAuthorizeUrl(GrantType grantType, OAuth2Parameters parameters) {
-		return replaceParamKey(super.buildAuthorizeUrl(grantType, adjustmentParameters(parameters)));
+		return replaceParamKey(super.buildAuthorizeUrl(grantType, parameters));
 	}
 
-	protected OAuth2Parameters adjustmentParameters(OAuth2Parameters parameters) {
-		return parameters;
-	}
-
-	protected String replaceParamKey(String url) {
+	private String replaceParamKey(String url) {
 		return url.replace("client_id", "appid").replace("client_secret", "secret");
 	}
 
