@@ -29,7 +29,10 @@ public class WecomUserTemplate implements WecomUserOperations {
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>(2);
 		params.add("code", code);
 		params.add("access_token", getAccessToken());
-		return getRestOperations().postForObject(UrlConstants.WECOM_USERINFO_API_URL, params, WecomUser.class);
+		WecomUser wecomUser = getRestOperations().postForObject(UrlConstants.WECOM_USERINFO_API_URL, params,
+				WecomUser.class);
+		params.add("userid", wecomUser.getUserid());
+		return getRestOperations().postForObject(UrlConstants.WECOM_USER_API_URL, params, WecomUser.class);
 	}
 
 }
