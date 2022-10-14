@@ -4,7 +4,7 @@ import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.oauth2.OAuth2Template;
 
 import org.springframework.social.wechat.UrlConstants;
-import org.springframework.social.wechat.api.Wechat;
+import org.springframework.social.wechat.api.Wecom;
 import org.springframework.social.wechat.api.impl.WecomImpl;
 import org.springframework.util.Assert;
 
@@ -13,7 +13,7 @@ import org.springframework.util.Assert;
  * 
  * @author Larry
  */
-public class WecomServiceProvider<T extends Wechat> extends AbstractOAuth2ServiceProvider<T> {
+public class WecomServiceProvider<T extends Wecom> extends AbstractOAuth2ServiceProvider<T> {
 
 	public WecomServiceProvider(String appId, String agentId, String appSecret) {
 		this(getOAuth2Template(appId, agentId, appSecret, UrlConstants.WECOM_QRCONNECT_API_URL));

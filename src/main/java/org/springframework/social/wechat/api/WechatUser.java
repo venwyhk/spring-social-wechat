@@ -35,7 +35,5 @@ public class WechatUser implements User {
 	private List<String> privilege;
 
 	private String unionid;
-	
-	private String userId; // Wecom only
 
 }

@@ -37,7 +37,7 @@ public class WechatUserTemplate implements UserOperations {
 		params.add("openid", openId);
 		params.add("lang", lang.getValue());
 		params.add("access_token", accessToken);
-		return restOperations.postForObject(UrlConstants.USERINFO_API_URL, params, WechatUser.class);
+		return getRestOperations().postForObject(UrlConstants.USERINFO_API_URL, params, WechatUser.class);
 	}
 
 }

@@ -22,7 +22,7 @@ public class WecomConnectionFactory extends OAuth2ConnectionFactory<Wecom> {
 
 	@Override
 	protected String extractProviderUserId(AccessGrant accessGrant) {
-		return ((WechatAccessGrant) accessGrant).getOpenid();
+		return ((WecomAccessGrant) accessGrant).getCode();
 	}
 
 }
