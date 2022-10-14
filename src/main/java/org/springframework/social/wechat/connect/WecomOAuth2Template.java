@@ -35,11 +35,15 @@ public class WecomOAuth2Template extends OAuth2Template {
 
 	@Override
 	protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
-		String url = accessTokenUrl;
-		if ("client_credentials".equals(parameters.getFirst("grant_type")))
-			url += "?corpid=" + parameters.getFirst("client_id") + "&corpsecret="
-					+ parameters.getFirst("client_secret");
-		return new AccessGrant((String) super.getRestTemplate().getForObject(url, Map.class).get("access_token"));
+		StringBuilder url = new StringBuilder();
+		url.append(accessTokenUrl);
+		url.append("?corpid=");
+		url.append(parameters.getFirst("client_id"));
+		url.append("&corpsecret=");
+		url.append(parameters.getFirst("client_secret"));
+		return new WecomAccessGrant(
+				(String) super.getRestTemplate().getForObject(url.toString(), Map.class).get("access_token"),
+				parameters.getFirst("code"));
 	}
 
 	@Override
