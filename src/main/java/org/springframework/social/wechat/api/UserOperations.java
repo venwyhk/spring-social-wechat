@@ -9,8 +9,8 @@ import org.springframework.social.wechat.WechatLangEnum;
  */
 public interface UserOperations {
 
-	User getUserProfile(String openId);
+	WechatUser getUserProfile(String openId);
 
-	User getUserProfile(String openId, WechatLangEnum lang);
+	WechatUser getUserProfile(String openId, WechatLangEnum lang);
 
 }

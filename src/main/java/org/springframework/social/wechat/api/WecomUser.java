@@ -12,7 +12,7 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @ToString
-public class WecomUser extends ErrorCodeRes implements User {
+public class WecomUser {
 
 	private String userid;
 	
@@ -22,38 +22,10 @@ public class WecomUser extends ErrorCodeRes implements User {
 	
 	private Integer[] order;
 	
-	private String position;
-	
-	private String mobile;
-	
-	private String gender;
-	
-	private String email;
-	
-	private String bizMail;
-	
-	private Integer[] isLeaderInDept;
-	
-	private String[] directLeader;
-	
-	private String avatar;
-	
-	private String thumbAvatar;
+	private String alias;
 	
 	private String telephone;
 	
-	private String alias;
-	
-	private String address;
-	
-	private String openUserid;
-	
-	private Integer mainDepartment;
-	
 	private Integer status;
-	
-	private Integer qrCode;
-	
-	private Integer externalPosition;
 
 }
