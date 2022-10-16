@@ -28,6 +28,8 @@ Or in Maven:
 
 [WeChat Official Accounts Platform](https://mp.weixin.qq.com/) providerId: *wechatmp*
 
+[WeChat Work](https://work.weixin.qq.com/) providerId: *wecom*
+
 ## Sample ##
 
 [spring-social-wechat-sample](https://github.com/venwyhk/spring-social-wechat-sample)
