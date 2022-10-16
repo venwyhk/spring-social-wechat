@@ -24,7 +24,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ErrorHandler extends DefaultResponseErrorHandler {
 
-	public String providerId = null;
+	public String providerId;
 
 	@Override
 	public void handleError(ClientHttpResponse response) throws IOException {
