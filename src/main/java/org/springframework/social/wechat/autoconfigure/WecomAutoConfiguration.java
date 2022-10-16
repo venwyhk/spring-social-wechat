@@ -15,7 +15,6 @@ import org.springframework.social.config.annotation.SocialConfigurerAdapter;
 import org.springframework.social.connect.ConnectionFactory;
 
 import org.springframework.social.wechat.api.Wecom;
-import org.springframework.social.wechat.connect.WechatConnectionFactory;
 import org.springframework.social.wechat.connect.WecomConnectionFactory;
 
 import lombok.AllArgsConstructor;
@@ -26,7 +25,7 @@ import lombok.AllArgsConstructor;
  * @author Larry
  */
 @Configuration
-@ConditionalOnClass({ SocialConfigurerAdapter.class, WechatConnectionFactory.class })
+@ConditionalOnClass({ SocialConfigurerAdapter.class, WecomConnectionFactory.class })
 @ConditionalOnProperty(prefix = "spring.social.wecom", name = "app-id")
 @AutoConfigureBefore(SocialWebAutoConfiguration.class)
 @AutoConfigureAfter(WebMvcAutoConfiguration.class)
@@ -43,9 +42,8 @@ public class WecomAutoConfiguration {
 
 		@Override
 		protected ConnectionFactory<Wecom> createConnectionFactory() {
-			final WecomConnectionFactory factory = new WecomConnectionFactory(properties.getAppId(),
-					properties.getAgentId(), properties.getAppSecret());
-			return factory;
+			return new WecomConnectionFactory(properties.getAppId(), properties.getAgentId(),
+					properties.getAppSecret());
 		}
 
 	}

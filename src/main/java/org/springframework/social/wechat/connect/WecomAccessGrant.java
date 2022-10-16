@@ -4,6 +4,11 @@ import org.springframework.social.oauth2.AccessGrant;
 
 import lombok.Getter;
 
+/**
+ * spring-social-wechat
+ * 
+ * @author Larry
+ */
 @Getter
 public class WecomAccessGrant extends AccessGrant {
 

@@ -13,9 +13,9 @@ import org.springframework.social.support.ClientHttpRequestFactorySelector;
 import org.springframework.social.support.FormMapHttpMessageConverter;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.social.wechat.WechatErrorHandler;
+import org.springframework.social.wechat.ErrorHandler;
 import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
-import org.springframework.social.wechat.api.UserOperations;
+import org.springframework.social.wechat.api.WechatUserOperations;
 import org.springframework.social.wechat.api.WechatUserTemplate;
 import org.springframework.social.wechat.api.Wechat;
 
@@ -26,20 +26,20 @@ import org.springframework.social.wechat.api.Wechat;
  */
 public class WechatImpl extends AbstractOAuth2ApiBinding implements Wechat {
 
-	private UserOperations userOperations;
+	private WechatUserOperations userOperations;
 
 	public WechatImpl(String accessToken) {
 		super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);
 		this.userOperations = new WechatUserTemplate(restOperations(), accessToken);
 	}
 
-	public WechatImpl(String accessToken, UserOperations userOperations) {
+	public WechatImpl(String accessToken, WechatUserOperations userOperations) {
 		super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);
 		this.userOperations = userOperations;
 	}
 
 	@Override
-	public UserOperations userOperations() {
+	public WechatUserOperations userOperations() {
 		return userOperations;
 	}
 
@@ -60,7 +60,7 @@ public class WechatImpl extends AbstractOAuth2ApiBinding implements Wechat {
 
 	@Override
 	protected void configureRestTemplate(RestTemplate restTemplate) {
-		restTemplate.setErrorHandler(new WechatErrorHandler());
+		restTemplate.setErrorHandler(new ErrorHandler("wechat"));
 		super.configureRestTemplate(restTemplate);
 	}
 

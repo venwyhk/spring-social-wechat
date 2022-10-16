@@ -24,14 +24,21 @@ public class WecomUserTemplate implements WecomUserOperations {
 	private String accessToken;
 
 	@Override
-	public WecomUser getUserProfile(String code) {
+	public String getUserId(String code) {
 		Assert.notNull(code, "The code cannot be null");
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>(2);
 		params.add("code", code);
 		params.add("access_token", getAccessToken());
-		WecomUser wecomUser = getRestOperations().postForObject(UrlConstants.WECOM_USERINFO_API_URL, params,
-				WecomUser.class);
-		params.add("userid", wecomUser.getUserid());
+		return getRestOperations().postForObject(UrlConstants.WECOM_USERINFO_API_URL, params, WecomUser.class)
+				.getUserid();
+	}
+
+	@Override
+	public WecomUser getUserProfile(String code) {
+		Assert.notNull(code, "The code cannot be null");
+		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>(2);
+		params.add("access_token", getAccessToken());
+		params.add("userid", getUserId(code));
 		return getRestOperations().postForObject(UrlConstants.WECOM_USER_API_URL, params, WecomUser.class);
 	}
 

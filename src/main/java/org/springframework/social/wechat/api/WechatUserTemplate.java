@@ -17,7 +17,7 @@ import org.springframework.social.wechat.WechatLangEnum;
  * @author Larry
  */
 @AllArgsConstructor
-public class WechatUserTemplate implements UserOperations {
+public class WechatUserTemplate implements WechatUserOperations {
 
 	@Getter
 	private RestOperations restOperations;

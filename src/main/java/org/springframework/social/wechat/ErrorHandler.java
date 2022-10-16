@@ -14,18 +14,23 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import lombok.AllArgsConstructor;
+
 /**
  * spring-social-wechat
  * 
  * @author Larry
  */
-public class WechatErrorHandler extends DefaultResponseErrorHandler {
+@AllArgsConstructor
+public class ErrorHandler extends DefaultResponseErrorHandler {
+
+	public String providerId = null;
 
 	@Override
 	public void handleError(ClientHttpResponse response) throws IOException {
 		if (HttpStatus.Series.CLIENT_ERROR.equals(response.getStatusCode().series())) {
 			Map<String, Object> errorDetails = extractErrorDetailsFromResponse(response);
-			throw new UncategorizedApiException("wechat",
+			throw new UncategorizedApiException(providerId,
 					errorDetails.containsKey("errmsg") ? (String) errorDetails.get("errmsg") : "Unknown error", null);
 		}
 		handleUncategorizedError(response);
@@ -35,7 +40,7 @@ public class WechatErrorHandler extends DefaultResponseErrorHandler {
 		try {
 			super.handleError(response);
 		} catch (Exception e) {
-			throw new UncategorizedApiException("wechat", "Error consuming wechat REST api", e);
+			throw new UncategorizedApiException(providerId, "Error consuming " + providerId + " REST api", e);
 		}
 	}
 

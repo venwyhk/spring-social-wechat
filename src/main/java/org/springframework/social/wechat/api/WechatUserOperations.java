@@ -7,7 +7,7 @@ import org.springframework.social.wechat.WechatLangEnum;
  * 
  * @author Larry
  */
-public interface UserOperations {
+public interface WechatUserOperations {
 
 	WechatUser getUserProfile(String openId);
 

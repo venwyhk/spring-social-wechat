@@ -17,9 +17,5 @@ public class WecomProperties extends SocialProperties {
 	@Getter
 	@Setter
 	private String agentId;
-	
-	@Getter
-	@Setter
-	private String scope = "snsapi_base";
 
 }
