@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat)&nbsp;&nbsp;[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7ee8408664564445a19cda91ad00fa12)](https://www.codacy.com/app/larry7696/spring-social-wechat?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=venwyhk/spring-social-wechat&amp;utm_campaign=Badge_Grade)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat)
 
 # spring-social-wechat #
 
