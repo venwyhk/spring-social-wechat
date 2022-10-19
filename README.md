@@ -22,13 +22,13 @@ Or in Maven:
 </dependency>
 ```
 
-## Provider ID ##
+## Description ##
 
-[WeChat Open Platform](https://open.weixin.qq.com/) providerId: *wechat*
-
-[WeChat Official Accounts Platform](https://mp.weixin.qq.com/) providerId: *wechatmp*
-
-[WeChat Work](https://work.weixin.qq.com/) providerId: *wecom*
+|  Platform Name   | Provider Id  | Authorization Type |
+|  ----  | ---- | ---- |
+| [WeChat Open Platform](https://open.weixin.qq.com/)  | wechat | QR Code |
+| [WeChat Official Accounts Platform](https://mp.weixin.qq.com/)  | wechatmp | Webpage |
+| [WeChat Work](https://work.weixin.qq.com/)  | wecom | QR Code |
 
 ## Sample ##
 
