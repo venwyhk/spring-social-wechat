@@ -24,7 +24,7 @@ Or in Maven:
 
 ## Description ##
 
-|  Platform Name   | Provider Id  | Parameters | Authorization Type |
+|  Provider Name   | Provider Id  | Parameters | Authorization Type |
 |  ----  | ---- | ---- | ---- |
 | [WeChat Open Platform](https://open.weixin.qq.com/)  | wechat | spring.social.wechat.app-id<br/>spring.social.wechat.app-secret | QR Code |
 | [WeChat Official Accounts Platform](https://mp.weixin.qq.com/)  | wechatmp | spring.social.wechatmp.app-id<br/>spring.social.wechatmp.app-secret | Webpage |
