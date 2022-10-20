@@ -30,6 +30,15 @@ Or in Maven:
 | [WeChat Official Accounts Platform](https://mp.weixin.qq.com/)  | wechatmp | spring.social.wechatmp.app-id<br/>spring.social.wechatmp.app-secret | Webpage |
 | [WeChat Work](https://work.weixin.qq.com/)  | wecom | spring.social.wecom.app-id<br/>spring.social.wecom.agent-id<br/>spring.social.wecom.app-secret | QR Code |
 
+
+## HTML Example ##
+
+```html
+<form action="/signin/[ProviderId]" method="POST">
+    <button type="submit">Log in</button>
+</form>
+```
+
 ## Sample ##
 
 [spring-social-wechat-sample](https://github.com/venwyhk/spring-social-wechat-sample)
