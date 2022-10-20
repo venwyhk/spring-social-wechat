@@ -14,6 +14,7 @@ import org.springframework.social.support.FormMapHttpMessageConverter;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.social.wechat.ErrorHandler;
+import org.springframework.social.wechat.ProviderID;
 import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
 import org.springframework.social.wechat.api.WechatUserOperations;
 import org.springframework.social.wechat.api.WechatUserTemplate;
@@ -60,7 +61,7 @@ public class WechatImpl extends AbstractOAuth2ApiBinding implements Wechat {
 
 	@Override
 	protected void configureRestTemplate(RestTemplate restTemplate) {
-		restTemplate.setErrorHandler(new ErrorHandler("wechat"));
+		restTemplate.setErrorHandler(new ErrorHandler(ProviderID.WECHAT));
 		super.configureRestTemplate(restTemplate);
 	}
 

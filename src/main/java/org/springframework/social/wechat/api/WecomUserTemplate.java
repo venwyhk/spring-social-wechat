@@ -36,6 +36,7 @@ public class WecomUserTemplate implements WecomUserOperations {
 	@Override
 	public <T> T getUserProfile(String code, Class<T> responseType) {
 		Assert.notNull(code, "The code cannot be null");
+		Assert.notNull(responseType, "The responseType cannot be null");
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>(2);
 		params.add("access_token", getAccessToken());
 		params.add("userid", getUserId(code));
