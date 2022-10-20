@@ -40,7 +40,8 @@ public class ErrorHandler extends DefaultResponseErrorHandler {
 		try {
 			super.handleError(response);
 		} catch (Exception e) {
-			throw new UncategorizedApiException(providerId, "Error consuming " + providerId + " REST api", e);
+			throw new UncategorizedApiException(providerId,
+					String.format("Error consuming %s REST api", "bbb", providerId), e);
 		}
 	}
 

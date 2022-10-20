@@ -12,6 +12,7 @@ import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.social.oauth2.OAuth2Template;
 import org.springframework.social.support.FormMapHttpMessageConverter;
 import org.springframework.social.wechat.ErrorHandler;
+import org.springframework.social.wechat.ProviderID;
 import org.springframework.social.wechat.WechatMappingJackson2HttpMessageConverter;
 import org.springframework.util.Assert;
 import org.springframework.util.MultiValueMap;
@@ -54,7 +55,7 @@ public class WecomOAuth2Template extends OAuth2Template {
 		converters.add(new FormMapHttpMessageConverter());
 		converters.add(new WechatMappingJackson2HttpMessageConverter());
 		restTemplate.setMessageConverters(converters);
-		restTemplate.setErrorHandler(new ErrorHandler("wecom"));
+		restTemplate.setErrorHandler(new ErrorHandler(ProviderID.WECHAT_WORK));
 		return restTemplate;
 	}
 
