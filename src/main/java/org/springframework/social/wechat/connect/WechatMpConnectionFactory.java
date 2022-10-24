@@ -13,9 +13,16 @@ import org.springframework.social.wechat.api.WechatMp;
  * @author Larry
  */
 public class WechatMpConnectionFactory extends OAuth2ConnectionFactory<WechatMp> {
+	
+	private boolean checkState;
 
 	public WechatMpConnectionFactory(String appId, String appSecret) {
 		this(appId, appSecret, null);
+	}
+	
+	public WechatMpConnectionFactory(String appId, String appSecret, boolean checkState) {
+		this(appId, appSecret, null);
+		this.checkState = checkState;
 	}
 
 	public WechatMpConnectionFactory(String appId, String appSecret, ApiAdapter<WechatMp> apiAdapter) {
@@ -26,6 +33,11 @@ public class WechatMpConnectionFactory extends OAuth2ConnectionFactory<WechatMp>
 	@Override
 	protected String extractProviderUserId(AccessGrant accessGrant) {
 		return ((WechatAccessGrant) accessGrant).getOpenid();
+	}
+	
+	@Override
+	public boolean supportsStateParameter() {
+		return checkState;
 	}
 
 }

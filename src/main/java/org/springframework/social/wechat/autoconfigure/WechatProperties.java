@@ -17,5 +17,9 @@ public class WechatProperties extends SocialProperties {
 	@Getter
 	@Setter
 	private String scope = "snsapi_login";
+	
+	@Getter
+	@Setter
+	private String checkState = "true";
 
 }

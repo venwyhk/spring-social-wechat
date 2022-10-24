@@ -13,8 +13,15 @@ import org.springframework.social.wechat.api.Wechat;
  */
 public class WechatConnectionFactory extends OAuth2ConnectionFactory<Wechat> {
 
+	private boolean checkState;
+
 	public WechatConnectionFactory(String appId, String appSecret) {
 		this(appId, appSecret, null);
+	}
+
+	public WechatConnectionFactory(String appId, String appSecret, boolean checkState) {
+		this(appId, appSecret, null);
+		this.checkState = checkState;
 	}
 
 	public WechatConnectionFactory(String appId, String appSecret, ApiAdapter<Wechat> apiAdapter) {
@@ -24,6 +31,11 @@ public class WechatConnectionFactory extends OAuth2ConnectionFactory<Wechat> {
 	@Override
 	protected String extractProviderUserId(AccessGrant accessGrant) {
 		return ((WechatAccessGrant) accessGrant).getOpenid();
+	}
+
+	@Override
+	public boolean supportsStateParameter() {
+		return checkState;
 	}
 
 }
