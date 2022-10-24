@@ -12,9 +12,16 @@ import org.springframework.social.wechat.api.Wecom;
  * @author Larry
  */
 public class WecomConnectionFactory extends OAuth2ConnectionFactory<Wecom> {
+	
+	private boolean checkState = super.supportsStateParameter();
 
 	public WecomConnectionFactory(String appId, String agentId, String appSecret) {
 		this(appId, agentId, appSecret, null);
+	}
+	
+	public WecomConnectionFactory(String appId, String agentId, String appSecret, boolean checkState) {
+		this(appId, agentId, appSecret, null);
+		this.checkState = checkState;
 	}
 
 	public WecomConnectionFactory(String appId, String agentId, String appSecret, ApiAdapter<Wecom> apiAdapter) {
@@ -24,6 +31,11 @@ public class WecomConnectionFactory extends OAuth2ConnectionFactory<Wecom> {
 	@Override
 	protected String extractProviderUserId(AccessGrant accessGrant) {
 		return ((WecomAccessGrant) accessGrant).getCode();
+	}
+	
+	@Override
+	public boolean supportsStateParameter() {
+		return checkState;
 	}
 
 }
