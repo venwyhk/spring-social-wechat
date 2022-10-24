@@ -42,8 +42,8 @@ public class WecomAutoConfiguration {
 
 		@Override
 		protected ConnectionFactory<Wecom> createConnectionFactory() {
-			return new WecomConnectionFactory(properties.getAppId(), properties.getAgentId(),
-					properties.getAppSecret());
+			return new WecomConnectionFactory(properties.getAppId(), properties.getAgentId(), properties.getAppSecret(),
+					"true".equalsIgnoreCase(properties.getCheckState()));
 		}
 
 	}
