@@ -23,6 +23,12 @@ public class WecomUserTemplate implements WecomUserOperations {
 	@Getter
 	private String accessToken;
 
+	/**
+	 * 获取企业微信的userid，无需可信域名验证
+	 * <a href="https://developer.work.weixin.qq.com/document/path/91023">参考文档</a>
+	 * 
+	 * @param code
+	 */
 	@Override
 	public String getUserId(String code) {
 		Assert.notNull(code, "The code cannot be null");
@@ -33,6 +39,13 @@ public class WecomUserTemplate implements WecomUserOperations {
 				.getUserid();
 	}
 
+	/**
+	 * 自定义返回对象获取企业微信的用户详情，需要可信域名验证
+	 * <a href="https://developer.work.weixin.qq.com/document/path/90332">参考文档</a>
+	 * 
+	 * @param code
+	 * @param responseType 自定义返回对象
+	 */
 	@Override
 	public <T> T getUserProfile(String code, Class<T> responseType) {
 		Assert.notNull(code, "The code cannot be null");
@@ -43,6 +56,12 @@ public class WecomUserTemplate implements WecomUserOperations {
 		return getRestOperations().postForObject(UrlConstants.WECOM_USER_API_URL, params, responseType);
 	}
 
+	/**
+	 * 获取企业微信的部分用户信息，需要可信域名验证
+	 * <a href="https://developer.work.weixin.qq.com/document/path/90332">参考文档</a>
+	 * 
+	 * @param code
+	 */
 	@Override
 	public WecomUser getUserProfile(String code) {
 		return getUserProfile(code, WecomUser.class);
