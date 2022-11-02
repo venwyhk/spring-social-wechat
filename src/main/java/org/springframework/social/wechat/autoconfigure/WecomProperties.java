@@ -1,10 +1,8 @@
 package org.springframework.social.wechat.autoconfigure;
 
-import org.springframework.boot.autoconfigure.social.SocialProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * spring-social-wechat
@@ -12,14 +10,15 @@ import lombok.Setter;
  * @author Larry
  */
 @ConfigurationProperties(prefix = "spring.social.wecom")
-public class WecomProperties extends SocialProperties {
+@Data
+public class WecomProperties {
 
-	@Getter
-	@Setter
+	private String cropId;
+
 	private String agentId;
-	
-	@Getter
-	@Setter
+
+	private String secret;
+
 	private String checkState = "true";
 
 }

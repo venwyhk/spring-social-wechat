@@ -27,9 +27,9 @@ public class WecomOAuth2Template extends OAuth2Template {
 
 	private String agentId;
 
-	public WecomOAuth2Template(String clientId, String agentId, String clientSecret, String authorizeUrl,
+	public WecomOAuth2Template(String cropId, String agentId, String secret, String authorizeUrl,
 			String accessTokenUrl) {
-		super(clientId, clientSecret, authorizeUrl, accessTokenUrl);
+		super(cropId, secret, authorizeUrl, accessTokenUrl);
 		Assert.notNull(agentId, "The agentId property cannot be null");
 		this.agentId = agentId;
 	}
@@ -75,7 +75,7 @@ public class WecomOAuth2Template extends OAuth2Template {
 	}
 
 	private String replaceParamKey(String url) {
-		return url.replace("client_id", "appid").replace("client_secret", "secret");
+		return url.replace("client_id", "corpid").replace("client_secret", "corpsecret");
 	}
 
 }
