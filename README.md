@@ -24,11 +24,75 @@ Or in Maven:
 
 ## Description ##
 
-|  Provider Name   | Provider Id  | Parameters | Authorization Type |
-|  ----  | ---- | ---- | ---- |
-| [WeChat Open Platform](https://open.weixin.qq.com/)  | wechat | spring.social.wechat.app-id<br/>spring.social.wechat.app-secret | QR Code |
-| [WeChat Official Accounts Platform](https://mp.weixin.qq.com/)  | wechatmp | spring.social.wechatmp.app-id<br/>spring.social.wechatmp.app-secret | Webpage |
-| [WeChat Work](https://work.weixin.qq.com/)  | wecom | spring.social.wecom.app-id<br/>spring.social.wecom.agent-id<br/>spring.social.wecom.app-secret | QR Code |
+<table>
+    <tr>
+        <th>Provider Name</th>
+        <th>Provider Id</th>
+        <th>Authorization Type</th>
+        <th>Parameters</th>
+        <th>Required</th>
+        <th>Default</th>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="https://open.weixin.qq.com/">WeChat Open Platform</a></td>
+        <td rowspan="3">wechat</td>
+        <td rowspan="3">QR Code</td>
+        <td>spring.social.wechat.app-id</td>
+        <td>yes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>spring.social.wechat.app-secret</td>
+        <td>yes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>spring.social.wechat.check-state</td>
+        <td>no</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="https://mp.weixin.qq.com/">WeChat Official Accounts Platform</a></td>
+        <td rowspan="3">wechatmp</td>
+        <td rowspan="3">Webpage</td>
+        <td>spring.social.wechatmp.app-id</td>
+        <td>yes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>spring.social.wechatmp.app-secret</td>
+        <td>yes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>spring.social.wechatmp.check-state</td>
+        <td>no</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td rowspan="4" ><a href="https://work.weixin.qq.com">WeChat Work</a></td>
+        <td rowspan="4">wecom</td>
+        <td rowspan="4">QR Code</td>
+        <td>spring.social.wecom.crop-id</td>
+        <td>yes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>spring.social.wecom.agent-id</td>
+        <td>yes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>spring.social.wecom.secret</td>
+        <td>yes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>spring.social.wechat.check-state</td>
+        <td>no</td>
+        <td>false</td>
+    </tr>
+</table>
 
 
 ## HTML Example ##
