@@ -27,7 +27,7 @@ public class WecomUserTemplate implements WecomUserOperations {
 	 * 获取企业微信的userid，无需可信域名验证
 	 * <a href="https://developer.work.weixin.qq.com/document/path/91023">参考文档</a>
 	 * 
-	 * @param code
+	 * @param code Code
 	 */
 	@Override
 	public String getUserId(String code) {
@@ -43,7 +43,7 @@ public class WecomUserTemplate implements WecomUserOperations {
 	 * 自定义返回对象获取企业微信的用户详情，需要可信域名验证
 	 * <a href="https://developer.work.weixin.qq.com/document/path/90332">参考文档</a>
 	 * 
-	 * @param code
+	 * @param code Code
 	 * @param responseType 自定义返回对象
 	 */
 	@Override
@@ -60,7 +60,7 @@ public class WecomUserTemplate implements WecomUserOperations {
 	 * 获取企业微信的部分用户信息，需要可信域名验证
 	 * <a href="https://developer.work.weixin.qq.com/document/path/90332">参考文档</a>
 	 * 
-	 * @param code
+	 * @param code Code
 	 */
 	@Override
 	public WecomUser getUserProfile(String code) {
