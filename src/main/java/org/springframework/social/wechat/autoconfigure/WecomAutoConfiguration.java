@@ -26,7 +26,7 @@ import lombok.AllArgsConstructor;
  */
 @Configuration
 @ConditionalOnClass({ SocialConfigurerAdapter.class, WecomConnectionFactory.class })
-@ConditionalOnProperty(prefix = "spring.social.wecom", name = "crop-id")
+@ConditionalOnProperty(prefix = "spring.social.wecom", name = "app-id")
 @AutoConfigureBefore(SocialWebAutoConfiguration.class)
 @AutoConfigureAfter(WebMvcAutoConfiguration.class)
 public class WecomAutoConfiguration {
