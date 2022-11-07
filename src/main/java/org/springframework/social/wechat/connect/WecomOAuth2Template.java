@@ -38,7 +38,7 @@ public class WecomOAuth2Template extends OAuth2Template {
 	protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
 		StringBuilder url = new StringBuilder();
 		url.append(accessTokenUrl);
-		url.append("?corpid=");
+		url.append("?appid=");
 		url.append(parameters.getFirst("client_id"));
 		url.append("&corpsecret=");
 		url.append(parameters.getFirst("client_secret"));
@@ -75,7 +75,7 @@ public class WecomOAuth2Template extends OAuth2Template {
 	}
 
 	private String replaceParamKey(String url) {
-		return url.replace("client_id", "corpid").replace("client_secret", "corpsecret");
+		return url.replace("client_id", "appid").replace("client_secret", "corpsecret");
 	}
 
 }
