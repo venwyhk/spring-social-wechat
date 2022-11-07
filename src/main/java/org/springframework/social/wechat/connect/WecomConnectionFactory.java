@@ -19,13 +19,13 @@ public class WecomConnectionFactory extends OAuth2ConnectionFactory<Wecom> {
 		this(appId, agentId, appSecret, null);
 	}
 
-	public WecomConnectionFactory(String cropId, String agentId, String secret, boolean checkState) {
-		this(cropId, agentId, secret, null);
+	public WecomConnectionFactory(String appId, String agentId, String appSecret, boolean checkState) {
+		this(appId, agentId, appSecret, null);
 		this.checkState = checkState;
 	}
 
-	public WecomConnectionFactory(String cropId, String agentId, String secret, ApiAdapter<Wecom> apiAdapter) {
-		super(ProviderID.WECHAT_WORK, new WecomServiceProvider<Wecom>(cropId, agentId, secret), apiAdapter);
+	public WecomConnectionFactory(String appId, String agentId, String appSecret, ApiAdapter<Wecom> apiAdapter) {
+		super(ProviderID.WECHAT_WORK, new WecomServiceProvider<Wecom>(appId, agentId, appSecret), apiAdapter);
 	}
 
 	@Override

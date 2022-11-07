@@ -15,16 +15,16 @@ import org.springframework.util.Assert;
  */
 public class WecomServiceProvider<T extends Wecom> extends AbstractOAuth2ServiceProvider<T> {
 
-	public WecomServiceProvider(String cropId, String agentId, String secret) {
-		this(getOAuth2Template(cropId, agentId, secret, UrlConstants.WECOM_QRCONNECT_API_URL));
+	public WecomServiceProvider(String appId, String agentId, String appSecret) {
+		this(getOAuth2Template(appId, agentId, appSecret, UrlConstants.WECOM_QRCONNECT_API_URL));
 	}
 
 	public WecomServiceProvider(OAuth2Template template) {
 		super(template);
 	}
 
-	private static OAuth2Template getOAuth2Template(String cropId, String agentId, String secret, String authorizeUrl) {
-		WecomOAuth2Template oauth2Template = new WecomOAuth2Template(cropId, agentId, secret, authorizeUrl,
+	private static OAuth2Template getOAuth2Template(String appId, String agentId, String appSecret, String authorizeUrl) {
+		WecomOAuth2Template oauth2Template = new WecomOAuth2Template(appId, agentId, appSecret, authorizeUrl,
 				UrlConstants.WECOM_ACCESS_TOKEN_API_URL);
 		oauth2Template.setUseParametersForClientAuthentication(true);
 		return oauth2Template;

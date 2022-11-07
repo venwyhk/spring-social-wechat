@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat)
+app-id[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ikasoa/spring-social-wechat)
 
 # spring-social-wechat #
 
@@ -73,7 +73,7 @@ Or in Maven:
         <td rowspan="4" ><a href="https://work.weixin.qq.com">WeChat Work</a></td>
         <td rowspan="4">wecom</td>
         <td rowspan="4">QR Code</td>
-        <td>spring.social.wecom.crop-id</td>
+        <td>spring.social.wecom.app-id</td>
         <td>yes</td>
         <td></td>
     </tr>
@@ -83,7 +83,7 @@ Or in Maven:
         <td></td>
     </tr>
     <tr>
-        <td>spring.social.wecom.secret</td>
+        <td>spring.social.wecom.app-secret</td>
         <td>yes</td>
         <td></td>
     </tr>

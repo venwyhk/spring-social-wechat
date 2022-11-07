@@ -27,9 +27,9 @@ public class WecomOAuth2Template extends OAuth2Template {
 
 	private String agentId;
 
-	public WecomOAuth2Template(String cropId, String agentId, String secret, String authorizeUrl,
+	public WecomOAuth2Template(String appId, String agentId, String appSecret, String authorizeUrl,
 			String accessTokenUrl) {
-		super(cropId, secret, authorizeUrl, accessTokenUrl);
+		super(appId, appSecret, authorizeUrl, accessTokenUrl);
 		Assert.notNull(agentId, "The agentId property cannot be null");
 		this.agentId = agentId;
 	}

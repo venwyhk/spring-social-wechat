@@ -42,7 +42,7 @@ public class WecomAutoConfiguration {
 
 		@Override
 		protected ConnectionFactory<Wecom> createConnectionFactory() {
-			return new WecomConnectionFactory(properties.getCropId(), properties.getAgentId(), properties.getSecret(),
+			return new WecomConnectionFactory(properties.getAppId(), properties.getAgentId(), properties.getAppSecret(),
 					"true".equalsIgnoreCase(properties.getCheckState()));
 		}
 
