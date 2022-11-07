@@ -49,7 +49,7 @@ Or in Maven:
     <tr>
         <td>spring.social.wechat.check-state</td>
         <td>no</td>
-        <td>false</td>
+        <td>true</td>
     </tr>
     <tr>
         <td rowspan="3"><a href="https://mp.weixin.qq.com/">WeChat Official Accounts Platform</a></td>
@@ -67,7 +67,7 @@ Or in Maven:
     <tr>
         <td>spring.social.wechatmp.check-state</td>
         <td>no</td>
-        <td>false</td>
+        <td>true</td>
     </tr>
     <tr>
         <td rowspan="4" ><a href="https://work.weixin.qq.com">WeChat Work</a></td>
@@ -90,7 +90,7 @@ Or in Maven:
     <tr>
         <td>spring.social.wechat.check-state</td>
         <td>no</td>
-        <td>false</td>
+        <td>true</td>
     </tr>
 </table>
 
