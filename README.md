@@ -22,7 +22,7 @@ Or in Maven:
 </dependency>
 ```
 
-## Description ##
+## Profile ##
 
 <table>
     <tr>
