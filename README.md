@@ -6,13 +6,13 @@
 
 Production releases are available on *Maven Central*.
 
-In Gradle:
+### In Gradle: ###
 
 ```groovy
 implementation 'com.ikasoa:spring-social-wechat:${version}'
 ```
 
-Or in Maven:
+### Or in Maven: ###
 
 ```xml
 <dependency>
@@ -22,7 +22,44 @@ Or in Maven:
 </dependency>
 ```
 
-## Profile ##
+## Properties Example ##
+
+You can set multiple providers in your system.
+
+*[AppId]*, *[AppSecret]* and other parameters can be obtained from the provider website.
+
+### application.yml for WeChat Open Platform: ###
+
+```
+spring:
+  social:
+    wechat:
+      app-id: [AppId]
+      app-secret: [AppSecret]
+```
+
+### application.yml for WeChat Official Accounts Platform: ###
+
+```
+spring:
+  social:
+    wechatmp: 
+      app-id: [AppId]
+      app-secret: [AppSecret]
+```
+
+### application.yml for WeChat Work: ###
+
+```
+spring:
+  social:
+    wecom: 
+      app-id: [AppId]
+      agent-id: [AgentId]
+      app-secret: [Secret]
+```
+
+### Providers and Parameters: ###
 
 <table>
     <tr>
@@ -30,7 +67,7 @@ Or in Maven:
         <th>Provider Id</th>
         <th>Authorization Type</th>
         <th>Parameters</th>
-        <th>Required</th>
+        <th>Required<br/>(if you use this platform)</th>
         <th>Default</th>
     </tr>
     <tr>
@@ -94,8 +131,9 @@ Or in Maven:
     </tr>
 </table>
 
-
 ## HTML Example ##
+
+This *[ProviderId]* must be *'wechat'*, *'wechatmp'* or *'wecom'*. It depends on the provider you choose. (please refer to the table above)
 
 ```html
 <form action="/signin/[ProviderId]" method="POST">
