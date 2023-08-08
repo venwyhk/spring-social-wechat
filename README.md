@@ -28,7 +28,7 @@ You can set multiple providers in your system.
 
 *[AppId]*, *[AppSecret]* and other parameters can be obtained from the provider website.
 
-### application.yml for WeChat Open Platform: ###
+### application.yml for *WeChat Open Platform*: ###
 
 ```
 spring:
@@ -38,7 +38,7 @@ spring:
       app-secret: [AppSecret]
 ```
 
-### application.yml for WeChat Official Accounts Platform: ###
+### application.yml for *WeChat Official Accounts Platform*: ###
 
 ```
 spring:
@@ -48,7 +48,7 @@ spring:
       app-secret: [AppSecret]
 ```
 
-### application.yml for WeChat Work: ###
+### application.yml for *WeChat Work*: ###
 
 ```
 spring:
